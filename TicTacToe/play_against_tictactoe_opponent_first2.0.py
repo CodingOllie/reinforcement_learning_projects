@@ -1,12 +1,8 @@
-import random
-
 from gym import spaces
 from gym import Env
 from gym.spaces import Discrete
-import time, os
 import numpy as np
 from stable_baselines3 import PPO
-from stable_baselines3.common.callbacks import BaseCallback
 
 
 class Board:
