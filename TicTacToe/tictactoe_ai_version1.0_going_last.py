@@ -212,9 +212,8 @@ o = TicTacToeOpponent()
 
 env = TicTacToeENV(o, player=True)
 
-model = PPO('MlpPolicy', env, tensorboard_log='./train/log', verbose=1, learning_rate=0.000005)
-#model = PPO.load('./train/best_model_overall')
-model.learn(total_timesteps=10000000, callback=callback)
+model = PPO('MlpPolicy', env, tensorboard_log='./train/log', verbose=1, learning_rate=0.000001)
+model.learn(total_timesteps=100000000, callback=callback)
 model.save('./train/going_last/1.0/best_model_overall')
 
 episodes = 5

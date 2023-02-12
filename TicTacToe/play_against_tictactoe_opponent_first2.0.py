@@ -1,3 +1,5 @@
+import time
+
 from gym import spaces
 from gym import Env
 from gym.spaces import Discrete
@@ -133,8 +135,10 @@ class TicTacToeENV(Env):
 class TicTacToeOpponent:
     def __init__(self, player=False):
         self.player = player
+        self.model = PPO.load('./train/going_last/1.0/best_model_overall')
 
     def decision(self, action_def):
+
         X = input("Enter X COORD: ")
         Y = input("Enter Y COORD: ")
         return (int(X), int(Y))
