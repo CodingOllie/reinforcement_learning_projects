@@ -5,4 +5,4 @@ To play against the bots, you will need to install:
 * gym
 * numpy
 * stable_baselines3
-* opencv-python
+
